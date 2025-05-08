@@ -1,0 +1,19 @@
+la estructura basica del analisis de datos es el siguiente:
+    proyecto
+    |
+    |-/data
+    |-/db
+    |-/domain
+    |-/files
+
+*domain, se realiza:
+    dataset = clase abstracta de todas las variables pertinentes o necesarias del proyecto
+    sus variantes serian para los analogos en x tipo de entrada de datos y conexiones a api
+
+*files, se colocan los archivos a analisar.
+
+*db, carpeta de la base de datos.
+
+*data, codigos de guardado o setters de la informacion procesada
+
+Pagina de dependencias y explicativos = pypi.org
