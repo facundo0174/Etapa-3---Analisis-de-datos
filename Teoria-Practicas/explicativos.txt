@@ -14,6 +14,8 @@ la estructura basica del analisis de datos es el siguiente:
 
 *db, carpeta de la base de datos.
 
-*data, codigos de guardado o setters de la informacion procesada
+*data, codigos de conexion de la base de datos con los demas codigos es decir un codigo de gestion
 
 Pagina de dependencias y explicativos = pypi.org
+
+ABC es un libreria de clases default de python que da parametros adecuados para definir una clase abstracta

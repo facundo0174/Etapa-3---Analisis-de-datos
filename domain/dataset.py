@@ -7,14 +7,17 @@ class Dataset(ABC):
         pass
     
     @property
-    def datos(self):
-        #getter
-        return(self.__datos)
+    def data(self):
+        #getter y procesar
+        return(self.__data)
+    @property
+    def source(self):
+        return (self.__source)
 
-    @datos.setter
-    def datos(self, value):
+    @data.setter
+    def data(self, value):
         #validaciones
-        self.__datos=value
+        self.__data=value
 
     @abstractmethod
     def cargar_datos(self):
@@ -24,7 +27,14 @@ class Dataset(ABC):
         pass
 
     def validar_datos(self):
-        pass
+        if self.data is None:
+            raise ValueError("datos no cargados")
+        if self.data.isnull().sum.sum>0:
+            print("datos  faltantes detectados")
+        if self.data.duplicated().sum()>0:
+            print("filas duplicadas detectadas")
+        return True
+
 
     def transformar_datos(self):
         pass
