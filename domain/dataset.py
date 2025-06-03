@@ -29,7 +29,7 @@ class Dataset(ABC):
     def validar_datos(self):
         if self.data is None:
             raise ValueError("datos no cargados")
-        if self.data.isnull().sum.sum>0:
+        if self.data.isnull().sum().sum()>0:
             print("datos  faltantes detectados")
         if self.data.duplicated().sum()>0:
             print("filas duplicadas detectadas")
